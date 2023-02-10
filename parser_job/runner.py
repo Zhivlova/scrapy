@@ -4,11 +4,12 @@ from scrapy.utils.log import configure_logging
 from scrapy.utils.project import get_project_settings
 
 from spiders.hh_ru import HhRuSpider
+from instaparser.spider.instagram import InstaSpider
 
 if __name__ == '__main__':
     configure_logging()
     settings = get_project_settings()
     runner = CrawlerRunner(settings)
-    runner.crawl(HhRuSpider)
-
+    #runner.crawl(HhRuSpider)
+    runner.crawl(InstaSpider)
     reactor.run()

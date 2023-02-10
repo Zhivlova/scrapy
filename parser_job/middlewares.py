@@ -2,14 +2,13 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
 from scrapy import signals
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
 
 
-class ParserJobSpiderMiddleware:
+class InstaparserSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -56,7 +55,7 @@ class ParserJobSpiderMiddleware:
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class ParserJobDownloaderMiddleware:
+class InstaparserDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
